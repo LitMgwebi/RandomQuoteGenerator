@@ -1,1 +1,1 @@
-# RandomQuoteGenerator
+# SimpleCalculator
