@@ -15,11 +15,29 @@ class Calculation:
      def divide(num1, num2):
           return num1 / num2
      
-     def operation():
-          answer = 0
+     def expontent(num1, num2):
+          return num1**num2
+     
+     def quotient(num1, num2):
+          return num1 % num2
+     
+     def fraction_conversion(num1, num2):
+          return num1 / num2
+     
+class Operation:
+     answer = 0
+     operation = input("What operation do you want to perform: ")
+
+     if operation == "fraction Covernversion" or operation == "/.":
+          num = input("Enter fraction: ")
+               
+          numerator = num[0]
+          denominator = num[2]
+          answer = Calculation.fraction_conversion(int(numerator),int(denominator))
+          print(answer)  
+     else:
           num1 = int(input("Enter number 1: "))
           num2 = int(input("Enter number 2: "))
-          operation = input("What operation do you want to perform: ")
 
           if operation == "add" or operation == "sum" or operation == "+":
                answer = Calculation.add(num1, num2)
@@ -32,6 +50,12 @@ class Calculation:
                print(str(answer))
           elif operation == "divide" or operation == "division" or operation == "/":
                answer = Calculation.divide(num1, num2)
-               print(str(answer))     
-     
-Calculation.operation()
+               print(str(answer))    
+          elif operation == "expontent" or operation == "to the power" or operation == "**":
+               answer = Calculation.expontent(num1, num2)
+               print(str(answer)) 
+          elif operation == "quotient" or operation == "remainder" or operation == "%":
+               answer = Calculation.quotient(num1, num2)
+               print(str(answer)) 
+       
+Operation()
