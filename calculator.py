@@ -24,7 +24,7 @@ class Calculation:
      def fraction_conversion(num1, num2):
           return num1 / num2
      
-class Operation:
+def operation():
      answer = 0
      operation = input("What operation do you want to perform: ")
 
@@ -58,4 +58,3 @@ class Operation:
                answer = Calculation.quotient(num1, num2)
                print(str(answer)) 
        
-Operation()
